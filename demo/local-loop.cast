@@ -1,0 +1,8 @@
+{"version": 2, "width": 80, "height": 24, "timestamp": 1794744224, "env": {"SHELL": null, "TERM": null}}
+[0.006614, "o", "$ Stop-Loss Sentinel — local full-loop verification\r\n"]
+[1.008405, "o", "# The test suite replays the ENTIRE reactive loop against a mock system contract:\r\n#   price crash -> react() -> callback request -> proxy delivery -> vault exit\r\n"]
+[3.010644, "o", "$ forge test\r\n"]
+[3.107968, "o", "No files changed, compilation skipped\r\n"]
+[3.152861, "o", "\r\n[PASS] test_CallbackRejectsNonProxyCaller() (gas: 33252)\r\n[PASS] test_CallbackRejectsWrongSender() (gas: 31668)\r\n[PASS] test_NoCallbackWithoutPosition() (gas: 526547)\r\n[PASS] test_NoTriggerInsideBand() (gas: 121944)\r\n"]
+[3.153586, "o", "[PASS] test_PositionOpen() (gas: 15620)\r\n[PASS] test_StopLossFullLoop() (gas: 495377)\r\n[PASS] test_SubscribedOnDeploy() (gas: 5707)\r\n[PASS] test_TakeProfitFullLoop() (gas: 463386)\r\nSuite result: ok. 8 passed; 0 failed; 0 skipped; finished in 3.06ms (2.65ms CPU time)\r\n\r\n"]
+[5.181415, "o", "# 8/8 passing — including test_StopLossFullLoop and test_TakeProfitFullLoop.\r\n# On Lasna, the same loop runs on-chain: origin tx -> reactive tx -> callback tx.\r\n# On-chain recording plan: demo/DEMO-SCRIPT.md\r\n"]
