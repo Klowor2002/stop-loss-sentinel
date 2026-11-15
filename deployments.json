@@ -1,0 +1,22 @@
+{
+  "volt": "0x81Bde1cf4a6BB14dF743eAaa2FD085E538039946",
+  "volt_tx": "0x2e684e867dd260a40670147604a97b83797e07df40d11daf0bb1e9c34393e57a",
+  "susd": "0xa01Bbc41112B66b8ce2a894e8f25d240e4465d91",
+  "susd_tx": "0x49abfff27091961a7fb06e668305c96950aad85b94525cc411dcebdbcacef01a",
+  "feed": "0xf7a896373AE8b26AEA2fAe0Db19c24329F28b846",
+  "feed_tx": "0x8247c5147c9c0a530274a74298b275539be4e54876f2f307f8d1cb5563ea1832",
+  "sentinel": "0xB657F69DD996FED0e4ccABCD2f994415d80d035e",
+  "sentinel_tx": "0xe05a2a29712e9eca076e978673d701c98b89dc0abba84349565654d25c62cf07",
+  "vault": "0xE0ab06984d3c4e506128658BC07ae899F06EcBBd",
+  "vault_tx": "0x9bf7e1703bd73fd2442e3963c6e03a09838ba45ddc8c68803f7c1ec75012077c",
+  "setvault_tx": "0x7e898c0e51e942582bfd275eea22727b813098271f2c24b23efe950fe5888ca6",
+  "deployer": "0x25aE48B3b75844eC43D04dDdc8dDf39C6C9763D9",
+  "chain": "Reactive Lasna testnet",
+  "chainId": 5318007,
+  "rpc": "https://lasna-rpc.rnk.dev/",
+  "explorer": "https://lasna.reactscan.net",
+  "system_contract": "0x8888888888888888888888888888888888888888",
+  "stop_loss_price_cents": 25000,
+  "take_profit_price_cents": 40000,
+  "initial_price_cents": 30000
+}

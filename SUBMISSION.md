@@ -69,7 +69,7 @@ https://github.com/Klowor2002/stop-loss-sentinel
 
 **Demo video (< 3 min)**
 ```
-{{VIDEO_URL}}
+PENDING — to be recorded once the Lasna callback lands; finalized shot list in demo/SHOT-LIST.md
 ```
 Upload target: YouTube (unlisted OK) or Loom. Shot-by-shot plan: `demo/DEMO-SCRIPT.md` in the repo.
 Interim local proof video (logic loop): `demo/local-loop.mp4` in the repo — replace with the
@@ -79,18 +79,18 @@ on-chain recording before submitting.
 
 | Contract | Address | Deploy tx |
 |---|---|---|
-| TestToken (VOLT) | `{{VOLT_ADDRESS}}` | `{{VOLT_TX}}` |
-| TestToken (sUSD) | `{{SUSD_ADDRESS}}` | `{{SUSD_TX}}` |
-| PriceFeed | `{{FEED_ADDRESS}}` | `{{FEED_TX}}` |
-| StopLossSentinel | `{{SENTINEL_ADDRESS}}` | `{{SENTINEL_TX}}` |
-| GuardedVault | `{{VAULT_ADDRESS}}` | `{{VAULT_TX}}` |
+| TestToken (VOLT) | `0x81Bde1cf4a6BB14dF743eAaa2FD085E538039946` | `0x2e684e867dd260a40670147604a97b83797e07df40d11daf0bb1e9c34393e57a` |
+| TestToken (sUSD) | `0xa01Bbc41112B66b8ce2a894e8f25d240e4465d91` | `0x49abfff27091961a7fb06e668305c96950aad85b94525cc411dcebdbcacef01a` |
+| PriceFeed | `0xf7a896373AE8b26AEA2fAe0Db19c24329F28b846` | `0x8247c5147c9c0a530274a74298b275539be4e54876f2f307f8d1cb5563ea1832` |
+| StopLossSentinel | `0xB657F69DD996FED0e4ccABCD2f994415d80d035e` | `0xe05a2a29712e9eca076e978673d701c98b89dc0abba84349565654d25c62cf07` |
+| GuardedVault | `0xE0ab06984d3c4e506128658BC07ae899F06EcBBd` | `0x9bf7e1703bd73fd2442e3963c6e03a09838ba45ddc8c68803f7c1ec75012077c` |
 
 **Demo evidence — full reactive loop (from `demo-results.json`)**
 
-Act 1 (stop-loss): deposit `{{ACT1_DEPOSIT_TX}}` · origin crash tx `{{ACT1_ORIGIN_CRASH_TX}}` ·
-reactive tx `{{ACT1_REACTIVE_TX}}` · callback tx `{{ACT1_CALLBACK_TX}}`
-Act 2 (take-profit): origin moon tx `{{ACT2_ORIGIN_MOON_TX}}` · reactive tx `{{ACT2_REACTIVE_TX}}` ·
-callback tx `{{ACT2_CALLBACK_TX}}`
+Act 1 (stop-loss): deposit `0xb1e5979bccaabc229cfca953675b271448c5851ec5cb517df75f03728d6af614` · origin crash tx `0x3b0b7e814779747f1afceed08287e4c61d0d1315b1b134b8d3c04456d23bffa1` ·
+reactive tx `0xa49c86e87a06c9e9bef1ca4caf13216a8cf87280a3eefca3fee1a2f0979828d2` · callback tx `pending — awaiting Lasna callback delivery (network-side; see demo-results.json)`
+Act 2 (take-profit): origin moon tx `pending — Act 2 not yet run` · reactive tx `pending — Act 2 not yet run` ·
+callback tx `pending — awaiting Lasna callback delivery (network-side; see demo-results.json)`
 
 **Team**
 ```
@@ -113,7 +113,7 @@ reactive contracts, stop-loss, take-profit, automation, defi, lasna, solidity, f
    `0x2afaFD298b23b62760711756088F75B7409f5967` — `scripts/fund.sh` defaults to Ethereum Sepolia).
 2. Run `scripts/run_all.sh` (fund swap → deploy → demo). It writes `deployments.json` and
    `demo-results.json`. Then replace every `{{…}}` in README.md and in this file.
-3. Record the on-chain demo per `demo/DEMO-SCRIPT.md` (< 3 min), upload, set `{{VIDEO_URL}}`.
+3. Record the on-chain demo per `demo/DEMO-SCRIPT.md` (< 3 min), upload, set `PENDING — to be recorded once the Lasna callback lands; finalized shot list in demo/SHOT-LIST.md`.
 4. Commit + push the filled README; verify contracts on Reactscan if desired (Sourcify).
 5. On DoraHacks: sign up / log in (GitHub), open the event page, **Register**, then
    **Submit BUIDL** and paste the fields above. Submit well before **5 Dec 2026**.

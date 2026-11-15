@@ -71,11 +71,11 @@ pre-funded balance. Set it, fund it, forget it.
 
 | Contract | Address | Deploy tx |
 |---|---|---|
-| TestToken (VOLT) | `{{VOLT_ADDRESS}}` | `{{VOLT_TX}}` |
-| TestToken (sUSD) | `{{SUSD_ADDRESS}}` | `{{SUSD_TX}}` |
-| PriceFeed | `{{FEED_ADDRESS}}` | `{{FEED_TX}}` |
-| StopLossSentinel | `{{SENTINEL_ADDRESS}}` | `{{SENTINEL_TX}}` |
-| GuardedVault | `{{VAULT_ADDRESS}}` | `{{VAULT_TX}}` |
+| TestToken (VOLT) | `0x81Bde1cf4a6BB14dF743eAaa2FD085E538039946` | `0x2e684e867dd260a40670147604a97b83797e07df40d11daf0bb1e9c34393e57a` |
+| TestToken (sUSD) | `0xa01Bbc41112B66b8ce2a894e8f25d240e4465d91` | `0x49abfff27091961a7fb06e668305c96950aad85b94525cc411dcebdbcacef01a` |
+| PriceFeed | `0xf7a896373AE8b26AEA2fAe0Db19c24329F28b846` | `0x8247c5147c9c0a530274a74298b275539be4e54876f2f307f8d1cb5563ea1832` |
+| StopLossSentinel | `0xB657F69DD996FED0e4ccABCD2f994415d80d035e` | `0xe05a2a29712e9eca076e978673d701c98b89dc0abba84349565654d25c62cf07` |
+| GuardedVault | `0xE0ab06984d3c4e506128658BC07ae899F06EcBBd` | `0x9bf7e1703bd73fd2442e3963c6e03a09838ba45ddc8c68803f7c1ec75012077c` |
 
 Parameters: initial price **$300.00** · stop-loss **$250.00** · take-profit **$400.00** ·
 position **10 VOLT**. Explorer: https://lasna.reactscan.net
@@ -87,23 +87,23 @@ price crashes to $240 → the sentinel fires → the vault exits at $240 and pay
 
 | Step | Transaction |
 |---|---|
-| Deposit | `{{ACT1_DEPOSIT_TX}}` |
-| Origin event ($290, in-band) | `{{ACT1_ORIGIN_INBAND_TX}}` |
-| Origin event ($240, crash) | `{{ACT1_ORIGIN_CRASH_TX}}` |
-| Reactive tx (`react()`) | `{{ACT1_REACTIVE_TX}}` |
-| Callback tx (`executeStopLoss`) | `{{ACT1_CALLBACK_TX}}` |
+| Deposit | `0xb1e5979bccaabc229cfca953675b271448c5851ec5cb517df75f03728d6af614` |
+| Origin event ($290, in-band) | `0xcbf7e8d067fd7b22f62c6b525701752948a6e35edcb186d10bb1a70cf0cdf48f` |
+| Origin event ($240, crash) | `0x3b0b7e814779747f1afceed08287e4c61d0d1315b1b134b8d3c04456d23bffa1` |
+| Reactive tx (`react()`) | `0xa49c86e87a06c9e9bef1ca4caf13216a8cf87280a3eefca3fee1a2f0979828d2` |
+| Callback tx (`executeStopLoss`) | `pending — awaiting Lasna callback delivery (network-side; see demo-results.json)` |
 
 **Act 2 — take-profit.** Re-deposit, re-arm → price rips to $450 → the vault exits at the
 target and pays out 4,500 sUSD.
 
 | Step | Transaction |
 |---|---|
-| Re-deposit / re-arm | `{{ACT2_DEPOSIT_TX}}` / `{{ACT2_REARM_TX}}` |
-| Origin event ($450) | `{{ACT2_ORIGIN_MOON_TX}}` |
-| Reactive tx (`react()`) | `{{ACT2_REACTIVE_TX}}` |
-| Callback tx (`executeTakeProfit`) | `{{ACT2_CALLBACK_TX}}` |
+| Re-deposit / re-arm | `pending — Act 2 starts after the Act-1 callback lands` / `pending` |
+| Origin event ($450) | `pending — Act 2 not yet run` |
+| Reactive tx (`react()`) | `pending — Act 2 not yet run` |
+| Callback tx (`executeTakeProfit`) | `pending — awaiting Lasna callback delivery (network-side; see demo-results.json)` |
 
-🎬 **Demo video (< 3 min):** {{VIDEO_URL}} — shot-by-shot plan in `demo/DEMO-SCRIPT.md`.
+🎬 **Demo video (< 3 min):** recording pending — finalized shot list in `demo/SHOT-LIST.md`, to be filmed once the Lasna callback lands — shot-by-shot plan in `demo/DEMO-SCRIPT.md`.
 
 ## Run it yourself
 

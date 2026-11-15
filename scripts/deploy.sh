@@ -20,8 +20,8 @@ send() { # send <to> <sig> [args...] -> prints tx hash
 }
 create() { # create <src-path:Contract> <value-wei|0> [constructor args...] -> "address hash"
   local target="$1"; local value="$2"; shift 2
-  forge create "$target" --rpc-url "$LASNA_RPC" --private-key "$PRIVATE_KEY" --value "$value" --json --constructor-args "$@" \
-    | python3 -c "import sys,json;d=json.load(sys.stdin);print(d['contractAddress'], d['transactionHash'])"
+  forge create "$target" --rpc-url "$LASNA_RPC" --private-key "$PRIVATE_KEY" --value "$value" --broadcast --json --constructor-args "$@" \
+    | python3 -c "import sys,json;d=json.load(sys.stdin);print(d['deployedTo'], d['transactionHash'])"
 }
 
 echo "== Deploying TestToken VOLT =="
