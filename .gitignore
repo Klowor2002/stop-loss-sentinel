@@ -1,0 +1,9 @@
+# testnet-only burner key — NEVER commit
+.burner-key
+# foundry build artifacts
+out/
+cache/
+broadcast/
+
+# internal working state (not part of the submission)
+STATE.md
